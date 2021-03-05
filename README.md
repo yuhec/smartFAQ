@@ -2,6 +2,7 @@
 ## Bordeaux Ynov Campus - NLP Project
 **Creation date :** 25/02/2020
 **Update date :** 05/03/2021
+
 **Authors :**  
 - Laëtitia CONSTANTIN
 - Mouna DAHMANI
@@ -10,7 +11,7 @@
 
 ## Context 
 Full text of all questions and answers from Stack Overflow that are tagged with the python tag. 
-\n Useful for natural language processing and community analysis.
+/n Useful for natural language processing and community analysis.
 
 ## Data Description 
 This data is taken from [kaggle](https://www.kaggle.com/stackoverflow/pythonquestions)
@@ -19,7 +20,7 @@ This dataset is organized as **3 tables** between August 2, 2008 and October 19,
 
 - **Questions** contains the title, body, creation date, score, and owner ID for each Python question.
 - **Answers** contains the body, creation date, score, and owner ID for each of the answers to these questions. 
-\n The ParentId column links back to the Questions table.
+/n The ParentId column links back to the Questions table.
 - **Tags** contains the tags on each question besides the Python tag.
 
 ## PROJECT DEVELOPMENT
