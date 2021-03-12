@@ -32,11 +32,11 @@ This dataset is organized as **3 tables** between August 2, 2008 and October 19,
 
 ### Notebooks
 
-|      |     Clean    |   Model | Metrics | Score
-| -----|: -------------: | ---------: |
-|      |        Remove HTML, stop words, 10 000 lines        |      DecisionTreeRegressor | Coefficient of determination <br> explained_variance_score |  -0.05863092965279959 <br>  -0.001347619024735458
-|      |        Remove HTML, stop words, 10 000 lines         |      XGBRegressor | MAE (Mean Absolute Error) |  3.0697285415649413
-|      |        Remove HTML, stop words, 10 000 lines         |      RandomForestRegressor | Coefficient of determination <br> mean_squared_error | -0.058461126141001296 <br> 147.58852312712375
+|      |     Clean    |   Model | Metrics | Score |
+| -----|: -------------: | ---------: |---------: |---------: |
+|      |        Remove HTML, stop words, 10 000 lines        |      DecisionTreeRegressor | Coefficient of determination <br> explained_variance_score |  -0.05863092965279959 <br>  -0.001347619024735458 |
+|      |        Remove HTML, stop words, 10 000 lines         |      XGBRegressor | MAE (Mean Absolute Error) |  3.0697285415649413 |
+|      |        Remove HTML, stop words, 10 000 lines         |      RandomForestRegressor | Coefficient of determination <br> mean_squared_error | -0.058461126141001296 <br> 147.58852312712375 |
 
 ## Requirements
 * [`requirements.txt`](requirements.txt) 
