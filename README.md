@@ -39,14 +39,16 @@ This dataset is organized as **3 tables** between August 2, 2008 and October 19,
 ### Src : script python
 * [`cleanTxt/`](src/cleanTxt)
 
-### Notebooks
+
+## **Models performances**
 
 |  Cols    |     Clean    |   Model | Metrics | Score |
-| -----|: -------------: | ---------: |---------: |---------: |
+| ---      | :-:          | :-:     | :-:     | :-:   |
 |  Question, Question_body, Answer    |        Remove HTML, stop words, 10 000 lines, OneHotEncoder        |      DecisionTreeRegressor | mean_squared_error <br> mean_absolute_error |  4870.8 <br>  12.1 |
 |  Question, Question_body, Answer    |        Remove HTML, stop words, 10 000 lines, OneHotEncoder        |      XGBRegressor          | mean_squared_error <br> mean_absolute_error |  4842.6 <br> 15.8 |
 |   Question_body                     |        Remove HTML, stop words, 10 000 lines, OneHotEncoder        |      RandomForestRegressor | mean_squared_error <br> mean_absolute_error | 4814.2 <br> 15.19 |
-|   Answer                            |        Remove HTML, stop words, 10 000 lines, Word2Vec             |      CNN                   | mean_squared_error <br> mean_absolute_error | 147.6 <br> 2.9 |
+|   Answer                            |        Remove HTML, stop words, 10 000 lines, Word2Vec             |      **CNN**                   | mean_squared_error <br> mean_absolute_error | 147.6 <br> 2.9 |
+
 
 ## Requirements
 * [`requirements.txt`](requirements.txt) 
