@@ -1,7 +1,7 @@
 # SMART FAQ
 ## Bordeaux Ynov Campus - NLP Project
 **Creation date :** 25/02/2020
-**Update date :** 05/03/2021
+**Update date :** 19/03/2021
 
 **Authors :**  
 - Laëtitia CONSTANTIN
@@ -24,19 +24,29 @@ This dataset is organized as **3 tables** between August 2, 2008 and October 19,
 - **Tags** contains the tags on each question besides the Python tag.
 
 ## PROJECT DEVELOPMENT
+
 ### Model builder
 * [`00.Get_data/`](model_builder/00.Get_data)
 * [`01.Data_Exploration/`](model_builder/01.Data_Exploration)
 * [`02.Preprocessing/`](model_builder/02.Preprocessing)
-* [`03.Train_model/`](model_builder/03.Train_model)
+
+### DL and ML Models
+* [`DecisionTreeRegressor/`](model_builder/ML_models/DecisionTreeRegressor)
+* [`RandomForestRegressor/`](model_builder/ML_models/RandomForestRegressor)
+* [`XGBRegressor/`](model_builder/ML_models/XGBRegressor)
+* [`CNN/`](model_builder/DL_models/CNN)
+
+### Src : script python
+* [`cleanTxt/`](src/cleanTxt)
 
 ### Notebooks
 
-|      |     Clean    |   Model | Metrics | Score |
+|  Cols    |     Clean    |   Model | Metrics | Score |
 | -----|: -------------: | ---------: |---------: |---------: |
-|      |        Remove HTML, stop words, 10 000 lines        |      DecisionTreeRegressor | Coefficient of determination <br> explained_variance_score |  -0.05863092965279959 <br>  -0.001347619024735458 |
-|      |        Remove HTML, stop words, 10 000 lines         |      XGBRegressor | MAE (Mean Absolute Error) |  3.0697285415649413 |
-|      |        Remove HTML, stop words, 10 000 lines         |      RandomForestRegressor | Coefficient of determination <br> mean_squared_error | -0.058461126141001296 <br> 147.58852312712375 |
+|  Question, Question_body, Answer    |        Remove HTML, stop words, 10 000 lines, OneHotEncoder        |      DecisionTreeRegressor | mean_squared_error <br> mean_absolute_error |  4870.8 <br>  12.1 |
+|  Question, Question_body, Answer    |        Remove HTML, stop words, 10 000 lines, OneHotEncoder        |      XGBRegressor          | mean_squared_error <br> mean_absolute_error |  4842.6 <br> 15.8 |
+|   Question_body                     |        Remove HTML, stop words, 10 000 lines, OneHotEncoder        |      RandomForestRegressor | mean_squared_error <br> mean_absolute_error | 4814.2 <br> 15.19 |
+|   Answer                            |        Remove HTML, stop words, 10 000 lines, Word2Vec             |      CNN                   | mean_squared_error <br> mean_absolute_error | 147.6 <br> 2.9 |
 
 ## Requirements
 * [`requirements.txt`](requirements.txt) 
@@ -53,4 +63,4 @@ This dataset is organized as **3 tables** between August 2, 2008 and October 19,
 - [Axel CHENU](https://gitlab.com/ACHENU26) 
 
 **License**
-All Stack Overflow user contributions are licensed under CC-BY-SA 3.0 with attribution required.
+Ynov Bordeaux.
