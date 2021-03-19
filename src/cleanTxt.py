@@ -52,3 +52,5 @@ def brief_cleaning(df, str_cols):
         df[col] = sentences
     print('Time to clean up everything: {} mins'.format(round((time() - t) / 60, 2)))
     return df
+
+# © Laëtitia CONSTANTIN 2021
