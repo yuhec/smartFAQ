@@ -1,3 +1,6 @@
 data
 docker-compose.yml
 Dockerfile
+src/__pycache__
+model_builder/.ipynb_checkpoints
+Vectorize_approch/.ipynb_checkpoints
