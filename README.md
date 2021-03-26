@@ -35,9 +35,14 @@ This dataset is organized as **3 tables** between August 2, 2008 and October 19,
 * [`RandomForestRegressor/`](model_builder/ML_models/RandomForestRegressor)
 * [`XGBRegressor/`](model_builder/ML_models/XGBRegressor)
 * [`CNN/`](model_builder/DL_models/CNN)
+* [`LSTM/`](model_builder/DL_models/LSTM)
+* [`Dense/`](model_builder/DL_models/Dense_doc2vec_model)
 
 ### Src : script python
 * [`cleanTxt/`](src/cleanTxt)
+* [`metrics/`](src/metrics)
+* [`POC/`](src/POC)
+* [`tokenPad/`](src/tokenPad)
 
 
 ## **Models performances**
@@ -48,8 +53,9 @@ This dataset is organized as **3 tables** between August 2, 2008 and October 19,
 |  Question, Question_body, Answer    |        Remove HTML, stop words, 30 000 lines, OneHotEncoder        |      XGBRegressor          | mean_squared_error <br> mean_absolute_error |  4842.6 <br> 15.8 |
 |   Question_body                     |        Remove HTML, stop words, 30 000 lines, OneHotEncoder        |      RandomForestRegressor | mean_squared_error <br> mean_absolute_error | 4814.2 <br> 15.19 |
 |   Question_body                     |        Remove HTML, stop words, 30 000 lines, CountVectoriser      |      RandomForestRegressor | mean_squared_error <br> mean_absolute_error | 173.1   <br> 3.30 |
-|   Answer                            |        Remove HTML, stop words, 30 000 lines, Word2Vec             |      **CNN**               | mean_squared_error <br> mean_absolute_error | 147.6 <br> 2.9 |
-
+|   Question, Answer                  |        Remove HTML, stop words, 30 000 lines, Word2Vec             |      CNN                   | mean_squared_error <br> mean_absolute_error | 4957 <br> 12 |
+|   Answer                            |        Remove HTML, stop words, 30 000 lines, Word2Vec             |      LSTM                  | mean_squared_error <br> mean_absolute_error | 7368 <br> 11.8 |
+|   Answer                            |        Remove HTML, stop words, 30 000 lines, Doc2Vec              |      Dense                 | mean_squared_error <br> mean_absolute_error | 4935 <br> 11.57 |
 
 ## Requirements
 * [`requirements.txt`](requirements.txt) 
